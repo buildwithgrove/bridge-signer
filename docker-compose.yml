@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+    app:
+        container_name: pokt-signer
+        hostname: pokt-signer
+        restart: on-failure:3
+        build: 
+            context: .
+            dockerfile: Dockerfile
+            args: 
+                GITHUB_ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
+        env_file:
+            - ./.env
+        ports:
+            - "80:8080"

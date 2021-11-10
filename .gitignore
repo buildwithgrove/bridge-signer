@@ -1,0 +1,6 @@
+.env
+.DS_Store
+.vscode/
+prod.env
+signer
+!cmd/signer
