@@ -2,8 +2,6 @@ FROM golang:1.17.0-alpine3.13 AS build-env
 RUN apk --no-cache add build-base git mercurial gcc openssh-client ca-certificates tzdata
 RUN addgroup -g 32000 grp && adduser -D -H -u 32001 -G grp appuser
 ADD . /src
-ARG GITHUB_ACCESS_TOKEN
-RUN git config --global url."https://${GITHUB_ACCESS_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
 
 RUN cd /src && make production_bin
 
