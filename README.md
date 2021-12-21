@@ -37,3 +37,4 @@ Examples are in `.env.example` file
 - _SIGNER_ETH_PK_ - encrypted eth validation address private key
 - _SIGNER_ETH_PASS_ - eth key passphrase
 - _SIGNER_PORT_ - signer service grpc address
+- _GITHUB_ACCESS_TOKEN_ - used for fetching protocol repo during deploy
