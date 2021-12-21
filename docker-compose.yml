@@ -7,6 +7,8 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile
+            args: 
+                GITHUB_ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
         env_file:
             - ./.env
         ports:
